@@ -5,7 +5,6 @@ ALL PAIRS SHORTEST PATH
 
 import java.util.*;
 public class AllPairsShortestPath {
-	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("enter the number of vertices : ");
@@ -33,8 +32,8 @@ public class AllPairsShortestPath {
 		}
 		sc.close();
 	}
-
 }
+
 /*
 OUTPUT
 ------

@@ -5,7 +5,6 @@ TRAVELLING SALES PERSON PROBLEM:
 
 import java.util.*;
 public class TravellingSalesPerson {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int c[][]=new int[10][10], tour[]=new int[10];
@@ -32,7 +31,6 @@ public class TravellingSalesPerson {
         System.out.println("1");        
         System.out.println("Minimum Cost: "+cost);
     }
-
     public static int tspdp(int c[][], int tour[], int start, int n) {
         int mintour[]=new int[10], temp[]=new int[10], mincost=999,ccost, i, j, k;      
         if(start == n-1) {

@@ -15,12 +15,10 @@ public class DFS {
 		for(int i = 0; i < v; i++)
 			adj[i] = new LinkedList();
 	}
-	
 	void addEdge(int v, int w)
 	{
 		adj[v].add(w);
 	}
-	
 	void DFSUtil(int v, boolean visited[])
 	{
 		visited[v] = true;
@@ -35,13 +33,11 @@ public class DFS {
 			}
 		}
 	}
-	
 	void DFSs(int s)
 	{
 		boolean visited[] = new boolean[V];
 		DFSUtil(s, visited);
 	}
-	
 	public static void main(String[] args) 
 	{
 		Scanner sc = new Scanner(System.in);
@@ -62,7 +58,6 @@ public class DFS {
 		System.out.println();
 		sc.close();
 	}
-
 }
 
 /*

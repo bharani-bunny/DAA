@@ -4,15 +4,12 @@ KNAPSACK PROBLEM USING GREEDY METHOD
 */
 
 import java.util.*;
-
 public class KnapSack {
-
 	public static void print(int a[]) {
 		for(int k : a)
 			System.out.print(k + " ");
 		System.out.println();
 	}
-
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter number of objects : ");
@@ -31,7 +28,6 @@ public class KnapSack {
 		for(int i=0;i<object;i++) {
 			pw[i] = (double)p[i]/(double)w[i];
 		}
-
 		for(int i = 0; i < object - 1; i++)
 		{
 			for(int j = i+1; j < object ; j++)

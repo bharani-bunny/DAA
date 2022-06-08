@@ -4,9 +4,7 @@ KRUSKALS ALGORITHM
 */
 
 import java.util.*;
-
 public class Kruskals {
-
 	int parent[] = new int[10];
 	int find(int i) {
 		while(parent[i] != 0) {
@@ -14,7 +12,6 @@ public class Kruskals {
 		}
 		return i;
 	}
-	
 	void union(int i, int j) {
 		if(i < j) {
 			parent[i] = j;
@@ -22,7 +19,6 @@ public class Kruskals {
 			parent[j] = i;
 		}
 	}
-	
 	void solve(int g[][], int V) {
 		int u = 0, v = 0, sum = 0, e = 1, min;
 		while(e <= V - 1) {
@@ -48,7 +44,6 @@ public class Kruskals {
 		}
 		System.out.println("Cost of the spanning Tree = " + sum);
 	}
-	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter no of vertices : ");
@@ -66,6 +61,7 @@ public class Kruskals {
 		sc.close();
 	}
 }
+
 /*
 OUTPUT:
 -------

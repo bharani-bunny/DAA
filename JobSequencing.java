@@ -5,9 +5,7 @@ JOB SEQUENCING USING DEADLNES
 
 import java.util.*;
 public class JobSequencing {
-
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the number of jobs: ");
 		int n = sc.nextInt();
@@ -17,13 +15,10 @@ public class JobSequencing {
 		for(int i=0;i<n;i++) {
 			System.out.print("Enter job : ");
 			a[i] = sc.next();
-			//System.out.println();
 			System.out.print("Enter profit: ");
 			b[i] = sc.nextInt();
-			//System.out.println();
 			System.out.print("Enter dead line: ");
 			c[i] = sc.nextInt();
-			//System.out.println();
 		}
 		for(int i=0;i<n-1;i++) {
 			for(int j = i+1;j<n;j++) {
@@ -63,7 +58,6 @@ public class JobSequencing {
 			}
 		}
 		String x[] = new String[max];
-		//int xx[] = new int[max];
 		int profit = 0;
 		for(int i=0;i<n;i++) {
 			int pp=c[i];
@@ -90,6 +84,7 @@ public class JobSequencing {
 	}
 
 }
+
 /*
 OUTPUT:
 -------

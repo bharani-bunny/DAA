@@ -6,58 +6,50 @@ DEPTH FIRST SEARCH
 import java.util.*;
 
 public class DFS {
-	static int V;
-	static LinkedList<Integer> adj[];
-	@SuppressWarnings("unchecked")DFS(int v)
-	{
-		this.V = v;
-		adj = new LinkedList[v];
-		for(int i = 0; i < v; i++)
-			adj[i] = new LinkedList();
-	}
-	void addEdge(int v, int w)
-	{
-		adj[v].add(w);
-	}
-	void DFSUtil(int v, boolean visited[])
-	{
-		visited[v] = true;
-		System.out.print(v + " ");
-		Iterator<Integer> i = adj[v].listIterator();
-		while(i.hasNext())
-		{
-			int n = i.next();
-			if(!visited[n])
-			{
-				DFSUtil(n, visited);
-			}
-		}
-	}
-	void DFSs(int s)
-	{
-		boolean visited[] = new boolean[V];
-		DFSUtil(s, visited);
-	}
-	public static void main(String[] args) 
-	{
-		Scanner sc = new Scanner(System.in);
-		System.out.print("Enter no. of edges : ");
-		int n = sc.nextInt();
-		DFS g = new DFS(n);
-		System.out.println("Enter edges : ");
-		for(int i = 0; i < n; i++)
-		{
-			int x = sc.nextInt();
-			int y = sc.nextInt();
-			g.addEdge(x, y);
-		}
-		System.out.print("Enter Source Vertex : ");
-		int s = sc.nextInt();
-		System.out.print("The DFS Traversal is ");
-		g.DFSs(s);
-		System.out.println();
-		sc.close();
-	}
+    static int V;
+    static LinkedList < Integer > adj[];
+    @SuppressWarnings("unchecked") DFS(int v) {
+        this.V = v;
+        adj = new LinkedList[v];
+        for (int i = 0; i < v; i++)
+            adj[i] = new LinkedList();
+    }
+    void addEdge(int v, int w) {
+        adj[v].add(w);
+    }
+    void DFSUtil(int v, boolean visited[]) {
+        visited[v] = true;
+        System.out.print(v + " ");
+        Iterator < Integer > i = adj[v].listIterator();
+        while (i.hasNext()) {
+            int n = i.next();
+            if (!visited[n]) {
+                DFSUtil(n, visited);
+            }
+        }
+    }
+    void DFSs(int s) {
+        boolean visited[] = new boolean[V];
+        DFSUtil(s, visited);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter no. of edges : ");
+        int n = sc.nextInt();
+        DFS g = new DFS(n);
+        System.out.println("Enter edges : ");
+        for (int i = 0; i < n; i++) {
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+            g.addEdge(x, y);
+        }
+        System.out.print("Enter Source Vertex : ");
+        int s = sc.nextInt();
+        System.out.print("The DFS Traversal is ");
+        g.DFSs(s);
+        System.out.println();
+        sc.close();
+    }
 }
 
 /*

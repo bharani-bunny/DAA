@@ -8,7 +8,7 @@ class NQueens
 		cols = new boolean[n];
 		leftDiagonal = new boolean[2*n];
 		rightDiagonal = new boolean[2*n];
-		ArrayList<Integer> temp = new ArrayList<Integer>();
+		ArrayList<Integer> temp = new ArrayList<>();
 		for(int i=0;i<n;i++)
 			temp.add(0);
 		solveNQUtil(result,n,0,temp);
@@ -36,14 +36,15 @@ class NQueens
 		System.out.print("Enter n : ");
 		int n = sc.nextInt();
 		List<List<Integer>> res = nQueen(n);
-		int s = res.size();
-		System.out.println(s);
-		System.out.println(res);
+		System.out.println("Number of solutions : "+res.size());
+		for(List i : res)
+			System.out.println(i);
 	}
 }
 
 /*OUTPUT
 Enter n : 4
-2
-[[3, 1, 4, 2], [2, 4, 1, 3]]
+Number of solutions : 2
+[3, 1, 4, 2]
+[2, 4, 1, 3]
 */

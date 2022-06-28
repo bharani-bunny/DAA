@@ -70,7 +70,9 @@ public class MergeSort {
     }
 }
 
-/*OUTPUT
+/*
+OUTPUT
+------
 Enter size of array: 
 5
 Enter array elements: 
